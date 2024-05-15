@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Promotion</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .map-container {
+            text-align: center;
+            margin: 20px;
+        }
+        svg {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        .place {
+            cursor: pointer;
+            fill: #ff6600;
+            transition: fill 0.3s;
+        }
+        .place:hover {
+            fill: #ff3300;
+        }
+        .place-label {
+            font-size: 14px;
+            fill: #fff;
+            pointer-events: none;
+        }
+        .books {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .book {
+            width: 300px;
+            height: 450px;
+            margin: 10px;
+            position: relative;
+            cursor: pointer;
+            background-color: #fff;
+            border: 2px solid #ff6600;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .book img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .book .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .book:hover .info {
+            opacity: 1;
+        }
+        .book .info h2 {
+            margin-top: 0;
+        }
+        .book .info p {
+            margin-bottom: 0;
+        }
+        .book .info i {
+            font-size: 2em;
+            margin-top: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Welcome to Our Tourism Promotion Website</center></h1>
+
+    <div class="map-container">
+        <svg viewBox="0 0 800 400">
+            <!-- Artistic Earth image -->
+            <image x="250" y="50" width="300" height="300" xlink:href="C:\Users\USER\OneDrive\Desktop\earth3.jpeg" />
+            <!-- Globe design -->
+            <circle cx="400" cy="200" r="150" stroke="#fff" stroke-width="2" fill="none" />
+            <!-- Places -->
+            <circle class="place" cx="400" cy="50" r="20" data-link="https://maps.app.goo.gl/jyEChTJomBZkswPK8" />
+            <text class="place-label" x="400" y="45" text-anchor="middle">Nandi Temple</text>
+
+            <circle class="place" cx="550" cy="150" r="20" data-link="https://maps.google.com/?q=Srinivasa+Sagara" />
+            <text class="place-label" x="550" y="145" text-anchor="middle">Srinivasa Sagara</text>
+
+            <circle class="place" cx="500" cy="300" r="20" data-link="https://maps.google.com/?q=Kaiwara" />
+            <text class="place-label" x="500" y="295" text-anchor="middle">Kaiwara</text>
+
+            <circle class="place" cx="300" cy="300" r="20" data-link="https://maps.google.com/?q=Devanahalli+Fort" />
+            <text class="place-label" x="300" y="295" text-anchor="middle">Devanahalli Fort</text>
+
+            <circle class="place" cx="250" cy="150" r="20" data-link="https://maps.app.goo.gl/WwhrC9aRnxhq1YKv7" />
+            <text class="place-label" x="250" y="145" text-anchor="middle">Gopinath Swami Temple</text>
+
+            <circle class="place" cx="400" cy="350" r="20" data-link="https://maps.google.com/?q=Yelhanka+Lake" />
+            <text class="place-label" x="400" y="345" text-anchor="middle">Yelhanka Lake</text>
+        </svg>
+    </div>
+
+    <div class="books">
+        <div class="book" data-place="Place1">
+            <img src="nandi1.jpg" alt="Nandi Temple">
+            <div class="info">
+                <h2>Nandi Temple</h2>
+                <p>One of Karnataka's oldest temples, dating back to the 19th century.</p>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+        <div class="book" data-place="Place2">
+            <img src="ssdam.jpg" alt="Srinivasa Sagara">
+            <div class="info">
+                <h2>Srinivasa Sagara</h2>
+                <p>It's a natural wonder created by the Penna River, sometimes called the Grand Canyon of India.</p>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+        <div class="book" data-place="Place3">
+            <img src="kaivara.jpg" alt="Kaiwara">
+            <div class="info">
+                <h2>Kaiwara</h2>
+                <p>It was known as Ekachakrapura and is believed to be the place where the Pandavas lived.</p>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+        <div class="book" data-place="Place4">
+            <img src="dvnli fort.jpg" alt="Devanahalli Fort">
+            <div class="info">
+                <h2>Devanahalli Fort</h2>
+                <p>Famed for being Tippu Sultan's birthplace.</p>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+        <div class="book" data-place="Place5">
+            <img src="gopi.jpg" alt="Gopinath Swamy Temple">
+            <div class="info">
+                <h2>Gopinath Swamy Temple</h2>
+                <p>Built during the rule of the Nolamba Dynasty in the 9th century & later expanded by Chola & Hoysala kings.</p>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+        <div class="book" data-place="Place6">
+            <img src="yllake.jpg" alt="Yelhanka Lake">
+            <div class="info">
+                <h2>Yelhanka Lake</h2>
+                <p>One of the largest lakes in Bengaluru North Zone.</p>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script>
+        document.querySelectorAll('.place').forEach(place => {
+            place.addEventListener('click', () => {
+                window.location.href = place.getAttribute('data-link');
+            });
+        });
+    </script>
+<h2>1.Nandi Temple:</h2><hr><p>Visiting the Nandi Temple in Nandi Village is a journey through time, offering a glimpse into the grandeur of ancient Indian architecture and spirituality. Its serene environment, coupled with its historical and cultural richness, makes it a must-visit destination for tourists, history buffs, and devotees alike.</p><p>The temple is easily accessible from Bangalore, being just about 60 kilometers away. It makes for a convenient short trip or weekend getaway from the city.</p>
+
+
+<h2>2.Srinivasa sagara:</h2>
+<hr><p>Srinivasa Sagara in Chikkaballapur is a destination that combines natural beauty, historical significance, and recreational opportunities. Whether you’re a nature lover, history enthusiast, or just looking for a peaceful retreat, Srinivasa Sagara has something to offer. Its scenic landscapes, bird watching prospects, and cultural events make it a must-visit location for tourists exploring the region.</p>
+<p>Located close to the town of Chikkaballapur, Srinivasa Sagara is easily accessible by road. It’s a convenient spot for a short trip or a weekend getaway from Bangalore, which is about 60 kilometers away.</p>
+
+<h2>3.Kaiwara:</h2>
+<hr><p>Kaiwara Temple in Chintamani, Chikkaballapur, is a destination that combines spiritual significance, historical importance, and natural beauty. Whether you are a devotee, a history enthusiast, or a nature lover, the temple offers a fulfilling and enriching experience. Its serene surroundings, cultural festivals, and spiritual ambiance make it a must-visit location for tourists exploring the region.
+</p>
+<p>Kaiwara Temple is easily accessible from Bangalore, being approximately 65 kilometers away. It makes for a convenient day trip or weekend retreat for those living in or visiting Bangalore.
+The temple is well-connected by road, and the nearby town of Chintamani has good public transport facilities, making it easy for visitors to reach the temple.</p>
+
+
+<h2>4.Devanahalli Fort:</h2>
+<hr><p>Devanahalli Fort in Chikkaballapur is a destination that offers a blend of historical significance, architectural splendor, and natural beauty. Its proximity to Bangalore, coupled with its rich cultural heritage and serene environment, makes it a must-visit location for tourists. Whether you're a history enthusiast, architecture lover, or just seeking a peaceful retreat, Devanahalli Fort provides a fulfilling and enriching experience.
+</p>
+<p> Devanahalli Fort is conveniently located about 35 kilometers from Bangalore, making it an easy destination for a day trip or weekend getaway.</p>
+
+
+<h2>5.GopinathSwami Temple:</h2>
+<hr><p>The Gopinathswami Temple near Nandi in Chikkaballapur is a destination that combines spiritual significance, historical richness, and natural beauty. Its serene environment, coupled with its cultural vibrancy and proximity to Nandi Hills, makes it a must-visit location for tourists. Whether you're a devotee, history enthusiast, or nature lover, the Gopinathswami Temple provides a fulfilling and enriching experience.
+</p>
+<p>The Gopinathswami Temple is easily accessible from Bangalore, being approximately 60 kilometers away. Its proximity to Nandi Hills makes it an excellent addition to a day trip or weekend getaway.
+The temple is well-connected by road, and visitors can easily reach it via private vehicles or public transportation from nearby towns and cities.</p>
+
+
+<h2>6.Yelahanka Lake:</h2>
+<hr><p>Yelahanka Lake in Bengaluru is a destination that offers a blend of natural beauty, recreational activities, and ecological significance. As the largest lake in North Bengaluru, it serves as a vital green space and a hub for community engagement. Its serene environment, combined with the rich biodiversity and conservation efforts, makes it a must-visit location for tourists, nature lovers, and residents alike. Whether you are seeking a peaceful retreat, a place for outdoor activities, or an educational experience, Yelahanka Lake provides a fulfilling and enriching visit.
+</p>
+<p>Yelahanka Lake is conveniently located in the northern part of Bengaluru, making it easily accessible for residents and visitors. It is well-connected by road and public transport, enhancing its appeal as a local attraction.
+As one of the largest lakes in North Bengaluru, it provides an essential green space within the urban environment, offering a natural respite for city dwellers.</p>
+
+
+
+</body>
+</html>
